@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font */
+.ql-picker.ql-font {
+  .ql-picker-item {
+    font-size: 0;
+    &:before {
+      content: attr(data-value) !important;
+      font-size: 14px;
+    }
+  }
+}
+
+.ql-picker.ql-font {
+  .ql-active {
+    &:before {
+      content: attr(data-value) !important;
+      font-size: 14px;
+    }
+  }
+}
+
+.ql-picker.ql-font .ql-picker-label[data-value="Roboto"]::before,
+.ql-picker.ql-font .ql-picker-item[data-value="Roboto"]::before {
+  font-family: "Roboto", cursive;
+  content: "Roboto" !important;
+}
+
+.ql-picker.ql-font .ql-picker-label[data-value="Raleway"]::before,
+.ql-picker.ql-font .ql-picker-item[data-value="Raleway"]::before {
+  font-family: "Raleway", cursive;
+  content: "Raleway" !important;
+}
+
+.ql-picker.ql-font .ql-picker-label[data-value="Montserrat"]::before,
+.ql-picker.ql-font .ql-picker-item[data-value="Montserrat"]::before {
+  font-family: "Montserrat", cursive;
+  content: "Montserrat" !important;
+}
+
+.ql-picker.ql-font .ql-picker-label[data-value="Lato"]::before,
+.ql-picker.ql-font .ql-picker-item[data-value="Lato"]::before {
+  font-family: "Lato", cursive;
+  content: "Lato" !important;
+}
+
+.ql-picker.ql-font .ql-picker-label[data-value="Rubik"]::before,
+.ql-picker.ql-font .ql-picker-item[data-value="Rubik"]::before {
+  font-family: "Rubik", cursive;
+  content: "Rubik" !important;
+}
+
+/* Set content font-families */
+.ql-font-Roboto {
+  font-family: "Roboto";
+}
+.ql-font-Raleway {
+  font-family: "Raleway";
+}
+.ql-font-Montserrat {
+  font-family: "Montserrat";
+}
+.ql-font-Lato {
+  font-family: "Lato";
+}
+.ql-font-Rubik {
+  font-family: "Rubik";
+}
+/* font */
+.quill > * {
+  /* border-color: inherit !important;
+  color: inherit !important; */
+  @apply w-full;
+}
+.quill > .ql-toolbar {
+  /* border radius of the toolbar */
+  /* border-radius: 10px 10px 0 0; */
+  @apply bg-white border-none outline-none rounded-full mt-4 mb-4 shadow-lg sticky top-4 z-10 py-6;
+}
+.quill > .ql-container {
+  /* border radius of the container and for font size*/
+  /* font-size: inherit;
+  border-radius: 0 0 10px 10px; */
+  border-radius: 10px 10px 10px 10px;
+  @apply bg-gray-50 h-[calc(100vh-100px)] rounded-md;
+}
+.quill > .ql-container > .ql-editor {
+  /* border radius of the editor */
+  /* border-radius: 10px; */
+  @apply h-full w-full text-2xl text-gray-700;
+}
+.ql-toolbar.ql-snow .ql-picker-label {
+  color: inherit !important;
+  opacity: 0.76;
+}
+.ql-snow .ql-picker {
+  color: inherit !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  /* for placeholder */
+  color: inherit;
+}
+.ql-snow.ql-toolbar button svg {
+  opacity: 0.76;
+  color: currentColor;
+}
+.ql-snow .ql-stroke {
+  /* for the border of the editor */
+  /* stroke: currentColor !important; */
+}
+.ql-snow .ql-fill {
+  /* for the bg color */
+  /* fill: currentColor !important; */
+  /* @apply bg-black; */
+}
+.ql-picker-item {
+  /* for dropdown */
+  /* color:  !important; */
+}
+::placeholder {
+  @apply text-4xl;
+}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
