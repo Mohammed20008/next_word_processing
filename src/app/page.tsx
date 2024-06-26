@@ -1,10 +1,6 @@
 "use client";
 import Editor from "@/components/Editor";
-import { HeroHighlightDemo } from "@/components/HeroHighlight";
 import { MenubarDemo } from "@/components/Menu";
-import { Highlight } from "@/components/ui/hero-highlight";
-
-import CheckAuth from "@/hooks/CheckAuth";
 
 export default function Home() {
   return (

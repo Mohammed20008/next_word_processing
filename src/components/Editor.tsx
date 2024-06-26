@@ -2,8 +2,6 @@ import React from "react";
 import ReactQuill from "react-quill";
 import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import "react-quill/dist/quill.snow.css";
-import { HeroHighlight } from "./ui/hero-highlight";
-import { HeroHighlightDemo } from "./HeroHighlight";
 import { motion } from "framer-motion";
 
 export const Editor = () => {
